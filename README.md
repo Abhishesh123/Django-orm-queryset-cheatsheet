@@ -129,7 +129,7 @@ Entry.objects.filter(status__in=['Hung over', 'Sober', 'Drunk'])
 - - -
 
 
-The [contributors](https://github.com/Abhishesh123) 
+The [contributors](https://github.com/Abhishesh123):- Abhishesh mishra
 
 The Django web framework referenced in the Django-QuerySet-Cheatsheet is ​© 2005-2020 Django Software Foundation.
 Django is a registered trademark of the Django Software Foundation.
