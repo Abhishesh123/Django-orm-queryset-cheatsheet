@@ -11,6 +11,9 @@ Entry.objects.filter(**kwargs).exclude(**kwargs).order_by(**kwargs)
 ```
 
  * [filter](https://docs.djangoproject.com/en/3.0/ref/models/querysets/#filter)
+```python
+Entry.objects.exclude(pub_date__gt=datetime.date(2005, 1, 3)).exclude(headline='Hello')
+```
  * [exclude](https://docs.djangoproject.com/en/3.0/ref/models/querysets/#exclude)
  * [annotate](https://docs.djangoproject.com/en/3.0/ref/models/querysets/#annotate)
  * [order_by](https://docs.djangoproject.com/en/3.0/ref/models/querysets/#order-by)
@@ -99,7 +102,7 @@ Example: Entry.objects.get(id__exact=14)  # note double underscore.
  * [regex](https://docs.djangoproject.com/en/3.0/ref/models/querysets/#regex)
  * [iregex](https://docs.djangoproject.com/en/3.0/ref/models/querysets/#iregex)
 
-
+**Protip: Use [in](https://docs.djangoproject.com/en/3.0/ref/models/querysets/#in) to avoid chaining [filter()](https://docs.djangoproject.com/en/3.0/ref/models/querysets/#filter) and [exclude()](https://docs.djangoproject.com/en/3.0/ref/models/querysets/#exclude)**
 
 ```python
 Entry.objects.filter(status__in=['Hung over', 'Sober', 'Drunk'])
